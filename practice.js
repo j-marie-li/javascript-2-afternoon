@@ -13,7 +13,10 @@
   Give it a key of name with the value being your name, and another key of age with the value being your age. 
   Then alert your name using dot notation.
 */
-
+var me = {name: "Jasmine",
+age: 25
+}
+alert(me.name);
 //Code here
 
 
@@ -26,7 +29,14 @@
 */
 
 //Code here
-
+var favoriteThings = {
+  band: "Odesza",
+  food: "Asian",
+  person: "Tyki",
+  book: "Harry Potter",
+  movie: "Jason Bourne",
+  holiday: "Summer Vacation"
+}
 
 
 /*
@@ -34,7 +44,8 @@
 */
 
 //Code here
-
+favoriteThings["car"]= "2000";
+favoriteThings["brand"] = "Tesla";
 
 
 /*
@@ -42,7 +53,7 @@
 */
 
 //Code here
-
+favoriteThings.food = "Chicken Nuggets";
 
 
 ////////// PROBLEM 3 //////////
@@ -56,15 +67,16 @@
 */
 
 //Code here
-
-
-
+var backPack = {};
+var item = "firstPocket";
+backPack["firstPocket"]= item;
+backPack["firstPocket"]= "chapstick";
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-
+alert (backPack);
 
 
 /*
@@ -72,7 +84,7 @@ You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
 Instead, console.log your whole backPack object and then check out the console. 
 */
-
+console.log(backPack);
 //Code here
 
 
@@ -95,6 +107,8 @@ var user2 = {
   name -> 'Tyler S. McGinnis' and email -> 'tyler.mcginnis@devmounta.in'. 
   Make that change without modifying the original object code above.
 */
+user2.name = "Tyler S. McGinnis";
+user2.email = "tyler.mcginnis@devmounta.in";
 
 //Code Here
 
@@ -118,7 +132,7 @@ var user2 = {
 /*
   Create an empty object called methodCollection.
 */
-
+var methodCollection = {};
 //Code Here
 
 
@@ -129,15 +143,20 @@ var user2 = {
 */
 
 //Code Here
-
-
+methodCollection.alertHello = function(){
+  alert("hello")
+}
+methodCollection.logHello = function(){
+  console.log("hello")
+}
 
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
-
+methodCollection.alertHello();
+methodCollection.logHello();
 
 
 ////////// PROBLEM 6 //////////
@@ -148,7 +167,13 @@ var user2 = {
 */
 
 //Code Here
-
+ function makePerson (name, birthday, ssn) {
+let information = {
+  "name":name, 
+  "birthday":birthday,
+  "ssn": ssn};
+return information;
+}
 
 
 ////////// PROBLEM 7 //////////
@@ -159,5 +184,13 @@ var user2 = {
 */
 
 //Code Here
-
+function makeCard (cardNumber, expirationDate, securityCode)
+{
+  let creditCard = {
+    "card number":cardNumber,
+    "expiration date": expirationDate,
+    "security code": securityCode
+};
+return creditCard;
+}
 
